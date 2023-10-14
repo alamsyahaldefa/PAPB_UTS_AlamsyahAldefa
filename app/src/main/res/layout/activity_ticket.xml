@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_ticket.xml -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Method"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/pilihbioskop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Bisokop"
+        android:layout_below="@id/titleTextView"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="1dp"/>
+
+    <Spinner
+        android:id="@+id/cinemaSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/pilihbioskop"
+        android:layout_marginTop="1dp"
+        android:hint="Pilih Bioskop"/>
+
+    <TextView
+        android:id="@+id/pilihseat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Jenis Seat"
+        android:layout_below="@id/cinemaSpinner"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+    <Spinner
+        android:id="@+id/seatTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/pilihseat"
+        android:layout_marginTop="1dp"
+        android:hint="Pilih Jenis Seat"/>
+
+    <TextView
+        android:id="@+id/pilihtanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Tanggal"
+        android:layout_below="@id/seatTypeSpinner"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="294dp"
+        android:layout_height="382dp"
+        android:layout_below="@id/pilihtanggal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:scaleX="1"
+        android:scaleY="1" />
+
+    <TextView
+        android:id="@+id/totalPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Total Harga: Rp 35.000"/>
+
+    <Spinner
+        android:id="@+id/paymentMethodSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/totalPriceTextView"
+        android:layout_marginTop="1dp"
+        android:hint="Payment Method"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/paymentMethodSpinner"
+        android:layout_marginTop="1dp">
+
+        <Spinner
+            android:id="@+id/bankSpinner"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="BNI"/>
+
+        <EditText
+            android:id="@+id/accountNumberEditText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="Account Number"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/orderSummaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:text="Order Summary" />
+
+</RelativeLayout>
